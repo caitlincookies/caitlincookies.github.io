@@ -1,71 +1,27 @@
-/* General styles for the body */
-body {
-    font-family: Arial, sans-serif;
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-main {
-    padding: 20px;
-}
-
-/* Product grid */
-#product-list {
+/* Use Flexbox to make sure the footer stays at the bottom */
+body {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
 }
 
-.product {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 15px;
-    width: 200px;
-    text-align: center;
+/* Main content should take up the remaining space */
+main {
+    flex: 1;
 }
 
-.product img {
-    width: 150px;
-    height: auto;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #555;
-}
-
+/* Footer styling */
 footer {
     background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
-    position: relative;
     width: 100%;
-    bottom: 0;
+}
+
 }
