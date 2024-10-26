@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* 100% of the viewport height */
-    background-color: yellow; /* This will help visually check if the CSS is loading */
+    background-color: pink; /* This will help visually check if the CSS is loading */
 }
 
 /* Main content takes up the available space */
