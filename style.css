@@ -16,6 +16,13 @@ main {
     flex: 1; /* This allows main content to grow and push the footer down */
     padding-bottom: 20px; /* Some space at the bottom before the footer */
 }
+/* Ensure all product images are the same size */
+.product img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image is cropped properly to fit the box */
+    border-radius: 8px; /* Optional: Add rounded corners to the images */
+}
 
 /* Footer stays at the bottom */
 footer {
