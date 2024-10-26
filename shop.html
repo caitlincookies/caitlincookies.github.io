@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Bakery Shop</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Bakery Shop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-list">
+            <h2>Our Products</h2>
+
+            <!-- Product 1 -->
+            <div class="product" data-id="1">
+                <h3>Bread Loaf</h3>
+                <img src="https://via.placeholder.com/150" alt="Bread Loaf">
+                <p>Price: $5.00</p>
+                <button onclick="addToCart(1, 'Bread Loaf', 5)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product" data-id="2">
+                <h3>Chocolate Cake</h3>
+                <img src="https://via.placeholder.com/150" alt="Chocolate Cake">
+                <p>Price: $15.00</p>
+                <button onclick="addToCart(2, 'Chocolate Cake', 15)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product" data-id="3">
+                <h3>Croissant</h3>
+                <img src="https://via.placeholder.com/150" alt="Croissant">
+                <p>Price: $3.00</p>
+                <button onclick="addToCart(3, 'Croissant', 3)">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product" data-id="4">
+                <h3>Blueberry Muffin</h3>
+                <img src="https://via.placeholder.com/150" alt="Blueberry Muffin">
+                <p>Price: $4.00</p>
+                <button onclick="addToCart(4, 'Blueberry Muffin', 4)">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Our Bakery. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for handling cart functionality -->
+    <script>
+        function addToCart(id, name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const product = { id, name, price };
+
+            // Add product to cart array
+            cart.push(product);
+
+            // Save updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Alert user
+            alert(`${name} has been added to your cart!`);
+        }
+    </script>
+</body>
+</html>
