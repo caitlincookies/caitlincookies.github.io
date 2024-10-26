@@ -1,26 +1,28 @@
-/* Ensure the body and html take up the full height */
+/* Ensure html and body take up the full height */
 html, body {
     height: 100%;
     margin: 0;
 }
 
-/* Use Flexbox to make sure the footer stays at the bottom */
+/* Flexbox layout for body to allow main content to push footer down */
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* 100% of the viewport height */
 }
 
-/* Main content should take up the remaining space */
+/* Main content takes up the available space */
 main {
-    flex: 1;
+    flex: 1; /* This allows main content to grow and push the footer down */
+    padding-bottom: 20px; /* Some space at the bottom before the footer */
 }
 
-/* Footer styling */
+/* Footer stays at the bottom */
 footer {
     background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
     width: 100%;
+    margin-top: auto; /* Ensures the footer is pushed to the bottom */
 }
-
